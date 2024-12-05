@@ -12,7 +12,7 @@ import (
 	"github.com/cgeorgiades27/aoc2024-go/utils"
 )
 
-var re = regexp.MustCompile(`\d+`)
+var re1 = regexp.MustCompile(`\d+`)
 
 func day1a(r io.Reader) int {
 	scanner := bufio.NewScanner(r)
@@ -20,7 +20,7 @@ func day1a(r io.Reader) int {
 	var list1, list2 []int
 	for scanner.Scan() {
 		line := scanner.Text()
-		matches := re.FindAllString(line, -1)
+		matches := re1.FindAllString(line, -1)
 		list1 = append(list1, utils.Atoi(matches[0]))
 		list2 = append(list2, utils.Atoi(matches[1]))
 	}
@@ -43,7 +43,7 @@ func day1b(r io.Reader) int {
 
 	for scanner.Scan() {
 		line := scanner.Text()
-		matches := re.FindAllString(line, -1)
+		matches := re1.FindAllString(line, -1)
 		frequencyMap[utils.Atoi(matches[1])]++
 		list1 = append(list1, utils.Atoi(matches[0]))
 	}
