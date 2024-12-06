@@ -60,7 +60,7 @@ func day1b(r io.Reader) int {
 
 func TestDay1a(t *testing.T) {
 
-	infile, err := os.Open("indata/day1a")
+	infile, err := os.Open("indata/day1")
 	if err != nil {
 		t.Fatal("Couldn't open file", err)
 	}
@@ -94,7 +94,7 @@ func TestDay1a(t *testing.T) {
 
 func TestDay1b(t *testing.T) {
 
-	infile, err := os.Open("indata/day1b")
+	infile, err := os.Open("indata/day1")
 	if err != nil {
 		t.Fatal("Couldn't open file", err)
 	}

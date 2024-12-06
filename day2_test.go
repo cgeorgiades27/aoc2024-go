@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"io"
 	"os"
 	"regexp"
@@ -67,9 +66,7 @@ func day2b(r io.Reader) int {
 		if safe {
 			sum++
 		} else {
-			fmt.Println(matches)
 			matches = append(matches[:badActor], matches[badActor+1:]...)
-			fmt.Println(matches)
 			safe, badActor = checkMatches(matches)
 			if safe {
 				sum++
@@ -110,7 +107,7 @@ func checkMatches(matches []string) (bool, int) {
 
 func TestDay2a(t *testing.T) {
 
-	infile, err := os.Open("indata/day2a")
+	infile, err := os.Open("indata/day2")
 	if err != nil {
 		t.Fatal("Couldn't open file", err)
 	}
@@ -144,7 +141,7 @@ func TestDay2a(t *testing.T) {
 
 func TestDay2b(t *testing.T) {
 
-	infile, err := os.Open("indata/day2a")
+	infile, err := os.Open("indata/day2")
 	if err != nil {
 		t.Fatal("Couldn't open file", err)
 	}
